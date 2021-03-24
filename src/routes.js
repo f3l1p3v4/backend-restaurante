@@ -11,11 +11,11 @@ routes.get("/", function (req, res) {
 
 //Rote bushes
 routes.get("/all", SnackController.search);
-routes.get("/snack", SnackController.searchBushes);
-routes.post("/snack", SnackController.addBushes);
+routes.get("/snack", SnackController.searchSnack);
+routes.post("/snack", SnackController.addSnack);
 routes.put("/status", SnackController.changeStatus);
-routes.put("/snack", SnackController.changeBus);
-routes.delete("/snack/:id", SnackController.deleteBus);
+routes.put("/snack", SnackController.changeSnack);
+routes.delete("/snack/:id", SnackController.deleteSnack);
 
 //Rote info
 routes.get("/info", InfoController.search);
