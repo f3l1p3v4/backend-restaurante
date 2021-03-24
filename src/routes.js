@@ -1,6 +1,6 @@
 const { Router } = require("express");
 
-const BusController = require("./controllers/BusController");
+const SnackController = require("./controllers/SnackController");
 const InfoController = require("./controllers/InfoController");
 
 const routes = Router();
@@ -10,12 +10,12 @@ routes.get("/", function (req, res) {
 });
 
 //Rote bushes
-routes.get("/all", BusController.search);
-routes.get("/bushes", BusController.searchBushes);
-routes.post("/bushes", BusController.addBushes);
-routes.put("/bushes", BusController.changeStatus);
-routes.put("/bus", BusController.changeBus);
-routes.delete("/bushes/:id", BusController.deleteBus);
+routes.get("/all", SnackController.search);
+routes.get("/snack", SnackController.searchBushes);
+routes.post("/snack", SnackController.addBushes);
+routes.put("/status", SnackController.changeStatus);
+routes.put("/snack", SnackController.changeBus);
+routes.delete("/snack/:id", SnackController.deleteBus);
 
 //Rote info
 routes.get("/info", InfoController.search);
