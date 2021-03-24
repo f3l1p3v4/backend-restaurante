@@ -2,8 +2,8 @@ const mongoose = require("mongoose");
 
 const SnackSchema = new mongoose.Schema({
   name: String,
-  ingredientes: String,
-  price: Number
+  ingredients: String,
+  price: String
 });
 
 module.exports = mongoose.model("Snack", SnackSchema);
